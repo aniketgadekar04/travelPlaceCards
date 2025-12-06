@@ -5,11 +5,17 @@ import data from "./Data";
 
 function App() {
   const [tour, setTour] = useState(data);
+
+  function removeTour(id) {
+    const newTour = tour.filter((b) => b.id !== id);
+    setTour(newTour);
+  }
+
   // tour ke andar hamne sab data ko dal diya useState ke help se.
   return (
     <>
       <div>
-        <Tour tour={tour}></Tour>
+        <Tour tour={tour} removeTour={removeTour}></Tour>
         {/* tour ke data ko props ke help se Tour component me hamne passs kiya. */}
       </div>
     </>

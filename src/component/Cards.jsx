@@ -1,18 +1,14 @@
 import { useState } from "react";
 
-function Cards({ id, name, info, image, price }) {
+function Cards({ id, name, info, image, price, removeTour }) {
   const [toggle, setToggle] = useState(false);
-  const description = `${info.substring(0, 200)}`;
+  const description = toggle ? info : `${info.substring(0, 100)}`;
   // iska Matlab: string ke first 200 characters cut karke description me store honge.
 
   function readHandler() {
     setToggle(!toggle);
   }
 
-  function removeTour(){
-
-  }
-  
   return (
     <div className="card">
       <img src={image} className="image" alt="image" />
@@ -28,7 +24,7 @@ function Cards({ id, name, info, image, price }) {
           </span>
         </div>
       </div>
-      <button onClick={removeTour}>Not Interested</button>
+      <button onClick={() => removeTour(id)}>Not Interested</button>
     </div>
   );
 }
