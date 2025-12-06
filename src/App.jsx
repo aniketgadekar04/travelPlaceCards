@@ -11,6 +11,15 @@ function App() {
     setTour(newTour);
   }
 
+  if (tour.length === 0) {
+    return (
+      <div>
+        <h2>No Cards Left</h2>
+        <button onClick={() => setTour(data)}>Refresh</button>
+      </div>
+    );
+  }
+
   // tour ke andar hamne sab data ko dal diya useState ke help se.
   return (
     <>
