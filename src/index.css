@@ -1,1 +1,71 @@
 @import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.title {
+  font-size: 3rem;
+  border: 7px dashed rgb(1, 17, 160);
+  border-radius: 20px;
+  padding: 1vh 5vw;
+  text-align: center;
+  display: inline;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.mb{
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.card{
+  width: 400px;
+  height: max-content;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  align-items:center;
+}
+
+.image{
+  width: 390px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+
+.tour-info{
+  margin: 20px 5px;
+}
+
+.tour-price{
+  color: #1faa59;
+  font-size: 1.3rem;
+}
+

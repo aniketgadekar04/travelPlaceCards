@@ -15,7 +15,7 @@ function App() {
     return (
       <div>
         <h2>No Cards Left</h2>
-        <button onClick={() => setTour(data)}>Refresh</button>
+        <button className="btn-white" onClick={() => setTour(data)}>Refresh</button>
       </div>
     );
   }
@@ -23,7 +23,7 @@ function App() {
   // tour ke andar hamne sab data ko dal diya useState ke help se.
   return (
     <>
-      <div>
+      <div className="App">
         <Tour tour={tour} removeTour={removeTour}></Tour>
         {/* tour ke data ko props ke help se Tour component me hamne passs kiya. */}
       </div>

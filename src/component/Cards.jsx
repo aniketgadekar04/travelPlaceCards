@@ -14,7 +14,7 @@ function Cards({ id, name, info, image, price, removeTour }) {
       <img src={image} className="image" alt="image" />
       <div className="tour-info">
         <div className="tour-details">
-          <h4 className="tour-price">{price}</h4>
+          <h4 className="tour-price">र {price}</h4>
           <h4 className="tour-name">{name}</h4>
         </div>
         <div className="description">
@@ -24,7 +24,7 @@ function Cards({ id, name, info, image, price, removeTour }) {
           </span>
         </div>
       </div>
-      <button onClick={() => removeTour(id)}>Not Interested</button>
+      <button className="btn-red" onClick={() => removeTour(id)}>Not Interested</button>
     </div>
   );
 }
